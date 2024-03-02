@@ -33,7 +33,7 @@ To run the application locally, you need to have installed:
 
 1. Clone the repository:
 
-git clone https://github.com/your_username/intprep.git
+git clone https://github.com//intprep.git
 
 
 2. Navigate to the project directory:
