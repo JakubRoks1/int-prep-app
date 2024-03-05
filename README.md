@@ -21,6 +21,7 @@ IntPrep is a web application built using Java, Spring Boot, Lombok, and PostgreS
 - PostgreSQL
 - HTML/CSS (for the front-end layer)
 - Junit 5
+- Mockito
 
 ## Prerequisites
 
