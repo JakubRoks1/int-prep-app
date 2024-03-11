@@ -7,10 +7,10 @@ IntPrep is a web application built using Java, Spring Boot, Lombok, and PostgreS
 ## Features
 
 - User registration and management.
-- Addition, editing, and deletion of questions and answers related to various knowledge domains (e.g., programming, algorithms, software architecture, etc.).
-- Browsing available questions and answers.
-- Ability to mark questions and answers as favorites or completed.
-- Generating random sets of questions for practice.
+- Addition, editing, and deletion of question and answers related to various knowledge domains (e.g., programming, algorithms, software architecture, etc.).
+- Browsing available question and answers.
+- Ability to mark question and answers as favorites or completed.
+- Generating random sets of question for practice.
 - Progress statistics tracking.
 
 ## Technologies Used
