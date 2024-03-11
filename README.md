@@ -1,4 +1,4 @@
-# int-prep-app
+# int-prep-app.
 
 # IntPrep - Job Interview Preparation Application
 
