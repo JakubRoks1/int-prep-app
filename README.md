@@ -4,6 +4,11 @@
 
 IntPrep is a web application built using Java, Spring Boot, Lombok, and PostgreSQL technologies, designed to assist users in preparing for job interviews.
 
+
+## Idea for a Project
+
+This project is being developed as part of the "100 Commits" initiative. "100 Commits" is a nationwide, open, and entirely free competition aimed at all programmers, regardless of their level of experience, organized by DevMentors. The competition involves the development of a personal, public open-source project in any programming language, on a chosen topic (e.g., web application, mobile app, game, framework, library, etc.).
+
 ## Features
 
 - User registration and management.
