@@ -28,6 +28,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Junit 5
 - Mockito
 - AssertJ
+- Maven
 
 ## Prerequisites
 
