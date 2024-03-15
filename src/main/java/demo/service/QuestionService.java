@@ -1,10 +1,9 @@
 package demo.service;
 
-import demo.Question;
-import demo.QuestionDAO;
+import demo.model.Question;
+import demo.dao.QuestionDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
