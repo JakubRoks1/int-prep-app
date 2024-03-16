@@ -20,12 +20,12 @@ public class QuizService {
     @Autowired
     QuestionDAO questionDAO;
 
-    public ResponseEntity<String> createQuiz(String category, int numQ, String question) {
+    public ResponseEntity<String> createQuiz(String category, int numQ, String title) {
 
         List<Question> questions = questionDAO.findRandomQuestionsByCategory(category, numQ);
 
         Quiz quiz = new Quiz();
-        quiz.setName(question);
+        quiz.setTitle(title);
         quiz.setQuestions(questions);
         quizDAO.save(quiz);
 
