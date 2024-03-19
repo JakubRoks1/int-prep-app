@@ -30,6 +30,10 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - AssertJ
 - Maven
 
+## Screenshot
+
+## Demo
+
 ## Prerequisites
 
 To run the application locally, you need to have installed:
