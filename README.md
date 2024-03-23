@@ -30,6 +30,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - AssertJ
 - Maven
 - Postman
+- Angular (?)
 
 ## Screenshots
 
