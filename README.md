@@ -31,6 +31,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Maven
 - Postman
 - Angular (?)
+- Feign
 
 ## Screenshots
 
