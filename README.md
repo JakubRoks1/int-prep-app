@@ -17,6 +17,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Ability to mark questions and answers as favorites or completed.
 - Generating random sets of questions for practice.
 - Progress statistics tracking.
+- e-mail notifications
 
 ## Technologies Used
 
