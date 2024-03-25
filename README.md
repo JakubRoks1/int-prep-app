@@ -18,6 +18,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Generating random sets of questions for practice.
 - Progress statistics tracking.
 - e-mail notifications
+- generate set of questions
 
 ## Technologies Used
 
