@@ -2,6 +2,7 @@ package demo.service;
 
 import demo.model.Question;
 import demo.dao.QuestionDAO;
+import demo.model.QuestionWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,5 +37,12 @@ public class QuestionService {
     public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, Integer numQuestions) {
         List<Integer> questions = questionDAO.findRandomQuestionsByCategory(categoryName, numQuestions);
         return new ResponseEntity<>(questions, HttpStatus.OK);
+    }
+
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(List<Integer> questionIds) {
+        List<QuestionWrapper> wrappers = new ArrayList<>();
+
+
+        return new ResponseEntity<>(wrappers, HttpStatus.OK);
     }
 }

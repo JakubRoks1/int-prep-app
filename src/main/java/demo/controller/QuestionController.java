@@ -1,6 +1,7 @@
 package demo.controller;
 
 import demo.model.Question;
+import demo.model.QuestionWrapper;
 import demo.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -43,5 +44,10 @@ public class QuestionController {
     public ResponseEntity<List<Integer>> getQuestionsFromQuiz
             (@RequestParam String categoryName, @RequestParam Integer numQuestions){
         return questionService.getQuestionsForQuiz(categoryName, numQuestions);
+    }
+
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
+        return questionService.getQuestionsFromId(questionIds);
     }
 }
