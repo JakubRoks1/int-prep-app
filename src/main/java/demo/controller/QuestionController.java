@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -36,5 +37,11 @@ public class QuestionController {
     @PostMapping("add")
     public ResponseEntity<String> addQuestion(@RequestBody Question question) {
         return (questionService.addQuestion(question));
+    }
+
+    @GetMapping("generate")
+    public ResponseEntity<List<Integer>> getQuestionsFromQuiz
+            (@RequestParam String categoryName, @RequestParam Integer numQuestions){
+        return questionService.getQuestionsForQuiz(categoryName, numQuestions);
     }
 }

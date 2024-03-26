@@ -32,4 +32,9 @@ public class QuestionService {
         questionDAO.save(question);
         return new ResponseEntity<>("success", HttpStatus.CREATED);
     }
+
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, Integer numQuestions) {
+        List<Integer> questions = questionDAO.findRandomQuestionsByCategory(categoryName, numQuestions);
+        return new ResponseEntity<>(questions, HttpStatus.OK);
+    }
 }
