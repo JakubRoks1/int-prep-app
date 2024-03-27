@@ -41,6 +41,23 @@ public class QuestionService {
 
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(List<Integer> questionIds) {
         List<QuestionWrapper> wrappers = new ArrayList<>();
+        List<Question> questions = new ArrayList<>();
+
+        for(Integer id : questionIds){
+            questions.add(questionDAO.findById(id).get());
+        }
+
+        for (Question question : questions) {
+            QuestionWrapper wrapper = new QuestionWrapper();
+            wrapper.setId(question.getId());
+            wrapper.setQuestion(question.getQuestion());
+            wrapper.setAnswer1(question.getAnswer1());
+            wrapper.setAnswer2(question.getAnswer2());
+            wrapper.setAnswer3(question.getAnswer3());
+            wrapper.setAnswer4(question.getAnswer4());
+            wrappers.add(wrapper);
+
+        }
 
 
         return new ResponseEntity<>(wrappers, HttpStatus.OK);

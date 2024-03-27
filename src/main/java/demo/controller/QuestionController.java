@@ -50,4 +50,7 @@ public class QuestionController {
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
         return questionService.getQuestionsFromId(questionIds);
     }
+
+    @PostMapping("getScore")
+    public ResponseEntity<Integer>
 }
