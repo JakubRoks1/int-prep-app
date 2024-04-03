@@ -37,7 +37,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 
 ## Functionalities
 
-Project Setup and Configuration:
+# Project Setup and Configuration:
 
 Set up a new Spring Boot project with Maven or Gradle.
 Configure project dependencies including Spring Boot, Lombok, and PostgreSQL.
