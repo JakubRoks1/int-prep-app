@@ -2,6 +2,8 @@ package demo.service;
 
 import demo.dao.UserDAO;
 import demo.model.User;
+import jakarta.persistence.EntityManager;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,7 @@ public class RegistrationService {
     private UserDAO userDAO;
 
     public void registerNewUser(User user) {
+        boolean isFirstUser = userDAO.count() == 0;
 
         if (userDAO.findByUsername(user.getUsername()).isPresent()) {
             throw new RuntimeException("Username already exists");
@@ -33,6 +36,11 @@ public class RegistrationService {
         }
 
         userDAO.save(user);
+
+        if (isFirstUser) {
+            createDatabaseTable();
+        }
+
     }
 
         private boolean isValidPassword (String password){
@@ -60,6 +68,11 @@ public class RegistrationService {
     public List<User> getAllRegisteredUsers() {
         return userDAO.findAll();
     }
+
+    private void createDatabaseTable() {
+        userDAO.createExampleTable();
+    }
+
 
     }
 

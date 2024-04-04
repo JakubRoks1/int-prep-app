@@ -37,6 +37,7 @@ public class RegistrationController {
     @GetMapping
     public ResponseEntity<List<User>> getAllRegisteredUsers() {
         List<User> users = registrationService.getAllRegisteredUsers();
+        System.out.println("registration");
         return ResponseEntity.ok(users);
     }
 }
