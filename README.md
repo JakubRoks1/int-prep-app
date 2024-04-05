@@ -39,17 +39,17 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 
 ### Project Setup and Configuration:
 
-Set up a new Spring Boot project with Maven or Gradle. [x]
+Set up a new Spring Boot project with Maven or Gradle. [X]
 
-Configure project dependencies including Spring Boot, Lombok, and PostgreSQL. [x]
+Configure project dependencies including Spring Boot, Lombok, and PostgreSQL. [X]
 
-Configure database connection properties in application.properties file. [x]
+Configure database connection properties in application.properties file. [X]
 
-Set up Lombok for automatic boilerplate code generation. [x]
+Set up Lombok for automatic boilerplate code generation. [X]
 
 ### User Management:
 
-Implement user registration functionality. [x]
+Implement user registration functionality. [X]
 
 Set up user authentication and authorization using Spring Security.
 
@@ -59,11 +59,11 @@ Implement user roles (e.g., admin, regular user) if necessary.
 
 ### Question and Answer Management:
 
-Design database schema for storing questions and answers. [x]
+Design database schema for storing questions and answers. [X]
 
-Implement CRUD operations for questions and answers. [x]
+Implement CRUD operations for questions and answers. [X]
 
-Create RESTful APIs for adding, editing, and deleting questions and answers. [x]
+Create RESTful APIs for adding, editing, and deleting questions and answers. [X]
 
 Validate input data for questions and answers.
 
