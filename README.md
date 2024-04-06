@@ -58,9 +58,13 @@ Passwords Must Meet Complexity Requirements policy
   The Password must use following characters combinations
 
   Uppercase letters
+  
   Lowercase letters
+  
   Non-alphanumeric characters
+  
   (special characters): (~!@#$%^&*_-+=`|(){}[]:;"'<>,.?/)
+  
   Numberaic characters
 
 Set up user authentication and authorization using Spring Security.
