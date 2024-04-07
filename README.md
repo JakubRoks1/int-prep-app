@@ -51,21 +51,21 @@ Set up Lombok for automatic boilerplate code generation. [X]
 
 Implement user registration functionality. [X]
 
-Passwords Must Meet Complexity Requirements policy
+Passwords Must Meet Complexity Requirements policy [x]
 
-  The Passwords shouldn’t contain the user name or name and basic profile fields, such as their first name.
+  The Passwords shouldn’t contain the user name or name and basic profile fields, such as their first name. [x]
 
-  The Password must use following characters combinations
+  The Password must use following characters combinations [x]
 
-  Uppercase letters
+  Uppercase letters [x]
   
-  Lowercase letters
+  Lowercase letters [x]
   
-  Non-alphanumeric characters
+  Non-alphanumeric characters [x]
   
-  (special characters): (~!@#$%^&*_-+=`|(){}[]:;"'<>,.?/)
+  (special characters): (~!@#$%^&*_-+=`|(){}[]:;"'<>,.?/) [x]
   
-  Numberaic characters
+  Numberaic characters [x]
 
 Set up user authentication and authorization using Spring Security.
 
