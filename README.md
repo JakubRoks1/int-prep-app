@@ -71,7 +71,7 @@ Set up user authentication and authorization using Spring Security.
 
 Create user profile management features (update profile, change password, etc.).
 
-Implement user roles (e.g., admin, regular user) if necessary.
+Implement user roles (e.g., admin, regular user) if necessary. [X]
 
 ### Question and Answer Management:
 
