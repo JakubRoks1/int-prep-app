@@ -1,7 +1,10 @@
 package demo.model;
 
+import demo.role.UserRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,6 +30,9 @@ public class User {
     private String firstName;
 
     private String lastName;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 
     // Getters and setters
 }
