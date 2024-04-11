@@ -43,7 +43,7 @@ public class RegistrationService {
 
     }
 
-        private boolean isValidPassword (String password){
+        public static boolean isValidPassword(String password){
             boolean hasUppercase = false;
             boolean hasLowercase = false;
             boolean hasNonAlphanumeric = false;
