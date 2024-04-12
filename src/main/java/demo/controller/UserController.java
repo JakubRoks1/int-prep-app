@@ -1,11 +1,14 @@
 package demo.controller;
 
 import demo.exceptions.PasswordChangeException;
+import demo.exceptions.UserNotFoundException;
+import demo.model.ChangeEmail;
 import demo.model.ChangePassword;
 import demo.model.User;
 import demo.role.UserRole;
 import demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,6 +45,16 @@ public class UserController {
             return ResponseEntity.ok("Password changed successfully");
         } catch (PasswordChangeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/change-email")
+    public ResponseEntity<String> changeEmail(@RequestBody ChangeEmail request) {
+        try {
+            userService.changeEmail(request.getUsername(), request.getNewEmail());
+            return ResponseEntity.ok("Email changed successfully");
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
 }

@@ -56,4 +56,10 @@ public class UserServiceImpl implements UserService {
     public void updateProfile(User user) {
         userRepository.save(user);
     }
+
+    public void changeEmail(String username, String newEmail) {
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
+        user.setEmail(newEmail);
+        userRepository.save(user);
+    }
 }

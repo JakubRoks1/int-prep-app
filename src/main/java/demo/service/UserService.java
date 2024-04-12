@@ -11,4 +11,5 @@ public interface UserService {
     List<User> getUsersByRole(UserRole role);
     void changePassword(String username, String currentPassword, String newPassword);
     void updateProfile(User user);
+    void changeEmail(String username, String newEmail);
 }
