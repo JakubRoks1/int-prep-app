@@ -69,7 +69,7 @@ Passwords Must Meet Complexity Requirements policy [X]
 
 Set up user authentication and authorization using Spring Security.
 
-Create user profile management features (update profile, change password, etc.).
+Create user profile management features (update profile, change password, etc.). [X]
 
 Implement user roles (e.g., admin, regular user) if necessary. [X]
 
