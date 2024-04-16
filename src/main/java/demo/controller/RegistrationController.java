@@ -32,11 +32,6 @@ public class RegistrationController {
         }
     }
 
-//    @GetMapping
-//    public ResponseEntity<String> getRegisterPage() {
-//        return ResponseEntity.ok("Welcome to registration.html page");
-//    }
-
     @GetMapping
     public ResponseEntity<List<User>> getAllRegisteredUsers() {
         List<User> users = registrationService.getAllRegisteredUsers();

@@ -6,6 +6,4 @@ import lombok.Data;
 public class ChangeEmail {
     private String username;
     private String newEmail;
-
-    // Getters and setters
 }

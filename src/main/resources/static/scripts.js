@@ -11,7 +11,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         .then(response => response.text())
         .then(data => {
             alert(data);
-            form.reset(); // Wyczyść formularz po zakończeniu rejestracji
+            form.reset();
         })
         .catch(error => console.error("Error:", error));
 });
