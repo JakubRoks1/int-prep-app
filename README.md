@@ -34,6 +34,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Postman
 - Angular (?)
 - Feign
+- Thymeleaf
 
 ## Functionalities
 
