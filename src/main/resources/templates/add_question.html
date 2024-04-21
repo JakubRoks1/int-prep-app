@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question</title>
+</head>
+<body>
+<h2>Add Question</h2>
+<form id="questionForm">
+    <label for="question">Question:</label>
+    <input type="text" id="question" name="question" required><br><br>
+
+    <label for="answer1">Answer 1:</label>
+    <input type="text" id="answer1" name="answer1" required><br><br>
+
+    <label for="answer2">Answer 2:</label>
+    <input type="text" id="answer2" name="answer2" required><br><br>
+
+    <label for="answer3">Answer 3:</label>
+    <input type="text" id="answer3" name="answer3" required><br><br>
+
+    <label for="answer4">Answer 4:</label>
+    <input type="text" id="answer4" name="answer4" required><br><br>
+
+    <label for="correctAnswer">Correct Answer:</label>
+    <input type="text" id="correctAnswer" name="correctAnswer" required><br><br>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required><br><br>
+
+    <button type="button" onclick="addQuestion()">Submit</button>
+</form>
+
+<script>
+    function addQuestion() {
+        var questionForm = document.getElementById("questionForm");
+        var formData = new FormData(questionForm);
+
+        fetch('http://localhost:8080/question/add', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to add question');
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert('Question added successfully');
+                questionForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to add question');
+            });
+    }
+</script>
+</body>
+</html>
