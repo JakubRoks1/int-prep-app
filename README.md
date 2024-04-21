@@ -32,7 +32,6 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - AssertJ
 - Maven
 - Postman
-- Angular (?)
 - Feign
 - Thymeleaf
 
@@ -134,7 +133,7 @@ Implement user feedback and rating system for questions and answers.
 
 ### Testing:
 
-Write unit tests for critical components using JUnit and Mockito.
+Write unit tests for critical components using JUnit and Mockito. []
 
 Perform integration testing to ensure proper interaction between different modules.
 
