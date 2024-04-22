@@ -25,13 +25,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/admin")
+    @GetMapping("/adminShow")
     public ResponseEntity<List<User>> getAdminUsers() {
         List<User> adminUsers = userService.getUsersByRole(UserRole.ROLE_ADMIN);
         return ResponseEntity.ok(adminUsers);
     }
 
-    @GetMapping("/user")
+    @GetMapping("/userShow")
     public ResponseEntity<List<User>> getUserUsers() {
         List<User> userUsers = userService.getUsersByRole(UserRole.ROLE_USER);
         return ResponseEntity.ok(userUsers);
