@@ -1,5 +1,6 @@
 package demo.service;
 
+import demo.model.Role;
 import demo.model.User;
 import demo.role.UserRole;
 
@@ -12,4 +13,9 @@ public interface UserService {
     void changePassword(String username, String currentPassword, String newPassword);
     void updateProfile(User user);
     void changeEmail(String username, String newEmail);
+    User saveUser(User user);
+    Role saveRole(Role role);
+    void addRoleToUser(String username, String roleName);
+    User getUser(String username);
+    List<User>getUsers();
 }

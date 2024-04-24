@@ -1,12 +1,17 @@
 package demo.impl;
 
+import demo.dao.RoleDAO;
 import demo.dao.UserDAO;
 import demo.exceptions.PasswordChangeException;
 import demo.exceptions.UserNotFoundException;
+import demo.model.Role;
 import demo.model.User;
 import demo.role.UserRole;
 import demo.service.RegistrationService;
 import demo.service.UserService;
+import jakarta.transaction.Transactional;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +19,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Data
+@Transactional
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -21,6 +29,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDAO userDAO;
+
+    @Autowired
+    private RoleDAO roleDAO;
 
 
     @Override
@@ -60,5 +71,32 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException("User not found with username: " + username));
         user.setEmail(newEmail);
         userRepository.save(user);
+    }
+
+    @Override
+    public User saveUser(User user) {
+        return userDAO.save(user);
+    }
+
+    @Override
+    public Role saveRole(Role role) {
+        return roleDAO.save(role);
+    }
+
+    @Override
+    public void addRoleToUser(String username, String roleName) {
+        Optional<User> user = userDAO.findByUsername(username);
+        Role role = roleDAO.findByName(roleName);
+        user.getRole().add(role);
+    }
+
+    @Override
+    public User getUser(String username) {
+        return null;
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return null;
     }
 }
