@@ -11,6 +11,7 @@ import demo.service.RegistrationService;
 import demo.service.UserService;
 import jakarta.transaction.Transactional;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @Data
 @Transactional
 @Slf4j
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -75,28 +77,39 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {
+        log.info("Save new user {} to the database", user.getUsername());
         return userDAO.save(user);
     }
 
     @Override
     public Role saveRole(Role role) {
+        log.info("Save new role {} to the database", role.getName());
         return roleDAO.save(role);
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) {
-        Optional<User> user = userDAO.findByUsername(username);
-        Role role = roleDAO.findByName(roleName);
-        user.getRole().add(role);
+        log.info("Adding role {} to user {}", roleName, username);
+        Optional<User> userOptional = userDAO.findByUsername(username);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            Role role = roleDAO.findByName(roleName);
+            user.getRoles().add(role);
+            userDAO.save(user);
+        } else {
+
+        }
     }
 
     @Override
-    public User getUser(String username) {
-        return null;
+    public Optional<User> getUser(String username) {
+        log.info("Fetching user {}", username);
+        return userDAO.findByUsername(username);
     }
 
     @Override
     public List<User> getUsers() {
-        return null;
+        log.info("Fetching all users");
+        return userDAO.findAll();
     }
 }

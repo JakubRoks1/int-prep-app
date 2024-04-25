@@ -6,6 +6,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,6 +20,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static jakarta.persistence.FetchType.EAGER;
+import static jakarta.persistence.GenerationType.AUTO;
+
 @Data
 @Entity
 @NoArgsConstructor
@@ -26,7 +30,7 @@ import java.util.List;
 @Table(name = "app_user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
 
     @Column(unique = true)
@@ -44,6 +48,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
-    @ManyToMany
+    @ManyToMany(fetch = EAGER)
     private Collection<Role> roles = new ArrayList<>();
 }

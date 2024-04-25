@@ -5,6 +5,7 @@ import demo.model.User;
 import demo.role.UserRole;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
 
@@ -16,6 +17,6 @@ public interface UserService {
     User saveUser(User user);
     Role saveRole(Role role);
     void addRoleToUser(String username, String roleName);
-    User getUser(String username);
+    Optional<User> getUser(String username);
     List<User>getUsers();
 }
