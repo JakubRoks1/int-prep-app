@@ -19,4 +19,6 @@ public interface UserService {
     void addRoleToUser(String username, String roleName);
     Optional<User> getUser(String username);
     List<User>getUsers();
+
+
 }
