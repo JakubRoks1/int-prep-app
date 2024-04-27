@@ -8,6 +8,7 @@ import demo.model.Role;
 import demo.model.User;
 import demo.role.UserRole;
 import demo.service.UserService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -82,6 +83,13 @@ public class UserController {
 
     @PostMapping("/role/addtouser")
     public ResponseEntity<?>addRoleToUser(@RequestBody RoleToUserForm form) {
-
+        userService.addRoleToUser(form.getUsername(), form.getRolename());
+        return ResponseEntity.ok().build();
     }
+}
+
+@Data
+class RoleToUserForm {
+    private String username;
+    private String rolename;
 }
