@@ -175,6 +175,8 @@ To run the application locally, you need to have installed:
 - PostgreSQL
 - Maven (optionally, if you are using a project build system)
 
+Up to date dependencies of:
+
 ## Running the Application
 
 1. Clone the repository:
