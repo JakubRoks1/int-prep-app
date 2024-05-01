@@ -12,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -19,14 +20,14 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig extends WebSecurityConfiguration {
 
     @Bean
-    public UserDetailsService userDetailsService(BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withUsername("user")
-                .password(bCryptPasswordEncoder.encode("userPass"))
+                .password(passwordEncoder.encode("userPass"))
                 .roles("USER")
                 .build());
         manager.createUser(User.withUsername("admin")
-                .password(bCryptPasswordEncoder.encode("adminPass"))
+                .password(passwordEncoder.encode("adminPass"))
                 .roles("USER", "ADMIN")
                 .build());
         return manager;
@@ -34,8 +35,8 @@ public class SecurityConfig extends WebSecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
+        //http.csrf().disable(); // Consider enabling CSRF protection for better security
+        http.authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry.requestMatchers(HttpMethod.DELETE).hasRole("ADMIN")
                                 .requestMatchers("/admin/**").hasAnyRole("ADMIN")
                                 .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
@@ -45,5 +46,10 @@ public class SecurityConfig extends WebSecurityConfiguration {
                 .sessionManagement(httpSecuritySessionManagementConfigurer -> httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
