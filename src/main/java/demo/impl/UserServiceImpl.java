@@ -18,12 +18,15 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+
+import static net.sf.jsqlparser.util.validation.metadata.NamedObject.user;
 
 @Service
 @Data
@@ -40,6 +43,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
     private RoleDAO roleDAO;
+
+    private final PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -84,12 +89,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public User saveUser(User user) {
         log.info("Save new user {} to the database", user.getUsername());
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userDAO.save(user);
     }
 
     @Override
     public Role saveRole(Role role) {
         log.info("Save new role {} to the database", role.getName());
+
         return roleDAO.save(role);
     }
 
