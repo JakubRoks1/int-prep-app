@@ -24,6 +24,8 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 
 - Java
 - Spring Boot
+- Spring Security
+- JWT Tokens
 - Lombok
 - PostgreSQL
 - HTML/CSS (for the front-end layer)
