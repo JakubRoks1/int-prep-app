@@ -19,6 +19,7 @@ This project is being developed as part of the "100 Commits" initiative. "100 Co
 - Progress statistics tracking.
 - e-mail notifications/reminders
 - generate set of questions
+- JWT authentication
 
 ## Technologies Used
 
