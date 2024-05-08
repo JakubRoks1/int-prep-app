@@ -86,7 +86,7 @@ Implement CRUD operations for questions and answers. [X]
 
 Create RESTful APIs for adding, editing, and deleting questions and answers. [X]
 
-Validate input data for questions and answers.
+Validate input data for questions and answers.[]
 
 Implement pagination and sorting for browsing questions and answers.
 
@@ -177,6 +177,7 @@ To run the application locally, you need to have installed:
 - Java Development Kit (JDK)
 - PostgreSQL
 - Maven (optionally, if you are using a project build system)
+
 
 Up to date dependencies of:
 
