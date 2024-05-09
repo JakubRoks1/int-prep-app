@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -39,7 +39,7 @@ public class QuestionController {
     }
 
     @PostMapping("add")
-    public ResponseEntity<String> addQuestion(@RequestBody Question question) {
+    public ResponseEntity<String> addQuestion(@Valid @RequestBody Question question) {
         return (questionService.addQuestion(question));
     }
 
