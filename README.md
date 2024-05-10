@@ -70,7 +70,7 @@ Passwords Must Meet Complexity Requirements policy [X]
   
   Numberaic characters [X]
 
-Set up user authentication and authorization using Spring Security.
+Set up user authentication and authorization using Spring Security. []
 
 Create user profile management features (update profile, change password, etc.). [X]
 
