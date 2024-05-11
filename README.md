@@ -88,7 +88,7 @@ Create RESTful APIs for adding, editing, and deleting questions and answers. [X]
 
 Validate input data for questions and answers.[]
 
-Implement pagination and sorting for browsing questions and answers.
+Implement pagination and sorting for browsing questions and answers. []
 
 ### Favorite and Completed Lists:
 
