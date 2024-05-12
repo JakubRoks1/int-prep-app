@@ -92,7 +92,7 @@ Implement pagination and sorting for browsing questions and answers. []
 
 ### Favorite and Completed Lists:
 
-Implement functionality for users to mark questions and answers as favorites or completed.
+Implement functionality for users to mark questions and answers as favorites or completed. []
 
 Create endpoints for managing favorite and completed lists.
 
