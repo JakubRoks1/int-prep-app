@@ -96,7 +96,7 @@ Implement functionality for users to mark questions and answers as favorites or 
 
 Create endpoints for managing favorite and completed lists. []
 
-Allow users to view and manage their lists through the UI.
+Allow users to view and manage their lists through the UI. []
 
 ### Random Question Sets:
 
