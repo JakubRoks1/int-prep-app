@@ -100,7 +100,7 @@ Allow users to view and manage their lists through the UI. []
 
 ### Random Question Sets:
 
-Develop an algorithm to generate random sets of questions based on user preferences.
+Develop an algorithm to generate random sets of questions based on user preferences. []
 
 Implement endpoints for generating and retrieving random question sets.
 
