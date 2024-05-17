@@ -104,7 +104,7 @@ Develop an algorithm to generate random sets of questions based on user preferen
 
 Implement endpoints for generating and retrieving random question sets. []
 
-Ensure that the same question is not repeated in a single set.
+Ensure that the same question is not repeated in a single set. []
 
 ### Progress Tracking:
 
