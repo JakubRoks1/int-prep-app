@@ -110,7 +110,7 @@ Ensure that the same question is not repeated in a single set. []
 
 Design database schema for storing user progress statistics. []
 
-Implement functionality to track user progress (e.g., number of questions answered, accuracy, etc.).
+Implement functionality to track user progress (e.g., number of questions answered, accuracy, etc.). []
 
 Create APIs to retrieve and update user progress data.
 
