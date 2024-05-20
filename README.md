@@ -152,7 +152,7 @@ Configure monitoring and logging for monitoring application performance and iden
 
 ### Documentation:
 
-Document the application architecture, APIs, and deployment process.
+Document the application architecture, APIs, and deployment process. []
 
 Write user documentation and guides for using the application.
 
