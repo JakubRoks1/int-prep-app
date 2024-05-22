@@ -114,7 +114,7 @@ Implement functionality to track user progress (e.g., number of questions answer
 
 Create APIs to retrieve and update user progress data. []
 
-Display progress statistics on the user dashboard.
+Display progress statistics on the user dashboard. []
 
 ### Email Notifications/Reminders:
 
