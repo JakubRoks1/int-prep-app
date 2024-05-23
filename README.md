@@ -118,7 +118,7 @@ Display progress statistics on the user dashboard. []
 
 ### Email Notifications/Reminders:
 
-Integrate email sending functionality using Spring Mail.
+Integrate email sending functionality using Spring Mail. []
 
 Implement scheduled tasks for sending email notifications/reminders (e.g., daily practice reminders, weekly progress reports).
 
