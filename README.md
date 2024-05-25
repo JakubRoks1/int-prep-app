@@ -1,4 +1,4 @@
-# int-prep-app.
+99# int-prep-app.
 
 # IntPrep - Job Interview Preparation Application
 
@@ -154,7 +154,7 @@ Configure monitoring and logging for monitoring application performance and iden
 
 Document the application architecture, APIs, and deployment process. []
 
-Write user documentation and guides for using the application.
+Write user documentation and guides for using the application. []
 
 Create developer documentation for future maintenance and contributions.
 
