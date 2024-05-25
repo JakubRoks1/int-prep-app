@@ -156,7 +156,7 @@ Document the application architecture, APIs, and deployment process. []
 
 Write user documentation and guides for using the application. []
 
-Create developer documentation for future maintenance and contributions.
+Create developer documentation for future maintenance and contributions. []
 
 ### Maintenance and Updates:
 
