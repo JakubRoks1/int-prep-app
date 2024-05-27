@@ -160,7 +160,7 @@ Create developer documentation for future maintenance and contributions. []
 
 ### Maintenance and Updates:
 
-Plan for regular maintenance tasks such as database backups, security patches, etc.
+Plan for regular maintenance tasks such as database backups, security patches, etc. []
 
 Monitor user feedback and update the application based on user suggestions and bug reports.
 
