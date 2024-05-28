@@ -1,4 +1,4 @@
-99# int-prep-app.
+# int-prep-app.
 
 # IntPrep - Job Interview Preparation Application
 
@@ -162,7 +162,7 @@ Create developer documentation for future maintenance and contributions. []
 
 Plan for regular maintenance tasks such as database backups, security patches, etc. []
 
-Monitor user feedback and update the application based on user suggestions and bug reports.
+Monitor user feedback and update the application based on user suggestions and bug reports. []
 
 Stay updated with the latest versions of frameworks and libraries used in the project.
 
