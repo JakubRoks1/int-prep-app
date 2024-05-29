@@ -164,7 +164,7 @@ Plan for regular maintenance tasks such as database backups, security patches, e
 
 Monitor user feedback and update the application based on user suggestions and bug reports. []
 
-Stay updated with the latest versions of frameworks and libraries used in the project.
+Stay updated with the latest versions of frameworks and libraries used in the project. []
 
 ## Screenshots
 
