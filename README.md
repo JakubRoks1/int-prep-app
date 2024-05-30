@@ -148,7 +148,7 @@ Deploy the application to a cloud platform (e.g., AWS, Azure, Heroku).
 
 Set up continuous integration and continuous deployment (CI/CD) pipelines.
 
-Configure monitoring and logging for monitoring application performance and identifying issues.
+Configure monitoring and logging for monitoring application performance and identifying issues. []
 
 ### Documentation:
 
