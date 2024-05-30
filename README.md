@@ -146,7 +146,7 @@ Conduct user acceptance testing to gather feedback and ensure usability.
 
 Deploy the application to a cloud platform (e.g., AWS, Azure, Heroku).
 
-Set up continuous integration and continuous deployment (CI/CD) pipelines.
+Set up continuous integration and continuous deployment (CI/CD) pipelines. []
 
 Configure monitoring and logging for monitoring application performance and identifying issues. []
 
