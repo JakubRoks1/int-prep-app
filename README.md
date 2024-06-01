@@ -144,7 +144,7 @@ Conduct user acceptance testing to gather feedback and ensure usability.
 
 ### Deployment:
 
-Deploy the application to a cloud platform (e.g., AWS, Azure, Heroku).
+Deploy the application to a cloud platform (e.g., AWS, Azure, Heroku). []
 
 Set up continuous integration and continuous deployment (CI/CD) pipelines. []
 
