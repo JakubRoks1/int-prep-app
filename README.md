@@ -140,7 +140,7 @@ Write unit tests for critical components using JUnit and Mockito. []
 
 Perform integration testing to ensure proper interaction between different modules.
 
-Conduct user acceptance testing to gather feedback and ensure usability.
+Conduct user acceptance testing to gather feedback and ensure usability. []
 
 ### Deployment:
 
