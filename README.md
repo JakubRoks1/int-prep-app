@@ -138,7 +138,7 @@ Implement user feedback and rating system for questions and answers.
 
 Write unit tests for critical components using JUnit and Mockito. []
 
-Perform integration testing to ensure proper interaction between different modules.
+Perform integration testing to ensure proper interaction between different modules. []
 
 Conduct user acceptance testing to gather feedback and ensure usability. []
 
