@@ -132,7 +132,7 @@ Add filtering options for browsing questions by categories or difficulty levels.
 
 Integrate a rich text editor for creating and editing question descriptions.
 
-Implement user feedback and rating system for questions and answers.
+Implement user feedback and rating system for questions and answers. []
 
 ### Testing:
 
