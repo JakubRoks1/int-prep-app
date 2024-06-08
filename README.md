@@ -126,7 +126,7 @@ Customize email templates for different types of notifications. []
 
 ### Additional Features:
 
-Implement search functionality to allow users to search for specific questions or topics.
+Implement search functionality to allow users to search for specific questions or topics. []
 
 Add filtering options for browsing questions by categories or difficulty levels.
 
